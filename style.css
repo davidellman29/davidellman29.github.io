@@ -5,9 +5,7 @@
     --secondary: #dedcff;
     --accent: #433bff;
 }
-*{
-    border: 1mm ridge rgba(0, 0, 0, 0.6);
-}
+
 body {
     color: var(--text);
     background: var(--background);
