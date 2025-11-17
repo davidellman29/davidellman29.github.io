@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balloon Game</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+        }
+        #balloon {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon">🎈</div>
+    <p>Use UP arrow to make it bigger, DOWN arrow to make it smaller!</p>
+
+    <script>
+        // Get the balloon element from the page
+        const balloon = document.getElementById('balloon');
+        
+        // The biggest size before it pops
+        const POP_SIZE = 300;
+        
+        // The smallest size it can be
+        const MIN_SIZE = 20;
+        
+        // This function runs when you press a key
+        function keyPressed(event) {
+            // Stop the page from scrolling
+            event.preventDefault();
+            
+            // If the balloon already popped, do nothing
+            if (balloon.textContent === '💥') {
+                return;
+            }
+            
+            // Get the current size of the balloon
+            let currentSize = window.getComputedStyle(balloon).fontSize;
+            // Remove the "px" from the end and turn it into a number
+            currentSize= parseFloat(currentSize);
+            
+            // Check which arrow key was pressed
+            if (event.key === 'ArrowUp') {
+                // Make the balloon 10% bigger
+                let newSize = currentSize * 1.1;
+                balloon.style.fontSize = newSize + 'px';
+                
+                // Check if it's big enough to pop
+                if (newSize > POP_SIZE) {
+                    popBalloon();
+                }
+            }
+            
+            if (event.key === 'ArrowDown') {
+                // Make the balloon 10% smaller
+                let newSize = currentSize * 0.9;
+                
+                // Don't let it get smaller than MIN_SIZE
+                if (newSize < MIN_SIZE) {
+                    newSize = MIN_SIZE;
+                }
+                
+                balloon.style.fontSize = newSize + 'px';
+            }
+        }
+        
+        // This function makes the balloon pop
+        function popBalloon() {
+            // Change the balloon to a boom emoji
+            balloon.textContent = '💥';
+            
+            // Stop listening for key presses
+            document.removeEventListener('keydown', keyPressed);
+        }
+        
+        // Start listening for key presses
+        document.addEventListener('keydown', keyPressed);
+    </script>
+</body>
+</html>
