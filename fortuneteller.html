@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Fortune Teller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        .fortune-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #5a4acd;
+        }
+
+        #fortune-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9ff;
+            border-radius: 5px;
+            border-left: 5px solid #6a5acd;
+            text-align: left;
+            display: none;
+        }
+
+        .error {
+            color: #d9534f;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Fortune Teller</h1>
+
+    <div class="fortune-container">
+        <div class="form-group">
+            <label for="question">Ask your question:</label>
+            <input type="text" id="question" placeholder="What will happen tomorrow?">
+            <div class="error" id="error-message">Please enter a question!</div>
+        </div>
+
+        <div class="form-group">
+            <label for="fortune-type">Choose fortune type:</label>
+            <select id="fortune-type">
+                <option value="general">General</option>
+                <option value="lucky">Lucky</option>
+                <option value="warning">Warning</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Your name (optional):</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+
+        <button id="get-fortune">Get My Fortune</button>
+
+        <div id="fortune-result">
+            <h3>Your Fortune:</h3>
+            <p id="fortune-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // Fortune messages for each type
+        const fortunes = {
+            general: [
+                "Something unexpected will happen this week.",
+                "You will receive good news soon.",
+                "A new opportunity is coming your way.",
+                "Trust your instincts in an upcoming decision.",
+                "Your patience will be rewarded."
+            ],
+            lucky: [
+                "You will find something you thought was lost.",
+                "A lucky number for you is 7.",
+                "Good fortune will follow you today.",
+                "You will make a new friend soon.",
+                "Money is coming your way unexpectedly."
+            ],
+            warning: [
+                "Be careful with your words today.",
+                "Double-check important details before proceeding.",
+                "Someone may not be telling you the whole truth.",
+                "Avoid making rash decisions this week.",
+                "Take time to rest and recharge soon."
+            ]
+        };
+
+        // Get DOM elements
+        const questionInput = document.getElementById('question');
+        const fortuneTypeSelect = document.getElementById('fortune-type');
+        const nameInput = document.getElementById('name');
+        const getFortuneBtn = document.getElementById('get-fortune');
+        const fortuneResult = document.getElementById('fortune-result');
+        const fortuneText = document.getElementById('fortune-text');
+        const errorMessage = document.getElementById('error-message');
+
+        // Event listeners
+        getFortuneBtn.addEventListener('click', getFortune);
+        questionInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                getFortune();
+            }
+        });
+
+        // Function to get and display fortune
+        function getFortune() {
+            const question = questionInput.value.trim();
+            const fortuneType = fortuneTypeSelect.value;
+            const name = nameInput.value.trim();
+
+            // Error handling - check if question is empty
+            if (question === '') {
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            errorMessage.style.display = 'none';
+
+            // Get a random fortune based on type
+            const fortuneArray = fortunes[fortuneType];
+            const randomIndex = Math.floor(Math.random() * fortuneArray.length);
+            const fortune = fortuneArray[randomIndex];
+
+            // Display the fortune
+            let resultText = `Question: "${question}"<br><br>`;
+
+            if (name) {
+                resultText += `Hello ${name}, `;
+            }
+
+            resultText += `your fortune is: ${fortune}`;
+
+            fortuneText.innerHTML = resultText;
+            fortuneResult.style.display = 'block';
+        }
+    </script>
+
+    <div class="nav-links" style="margin-top: 2rem; text-align: center; border-top: 1px solid #ddd; padding-top: 1rem;">
+        <a href="index.html">Home</a> |
+        <a href="day_2.html">Day 2</a> |
+        <a href="Day_3.html">Day 3</a> |
+        <a href="input_elements_challenge.html">Input challenge</a> |
+        <a href="Baloon.html">Baloon Game</a>
+    </div>
+</body>
+
+</html>

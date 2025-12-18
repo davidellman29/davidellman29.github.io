@@ -83,7 +83,7 @@
         btnGreet.addEventListener("click", () => {
             const name = nameInput.value || "Anonymous";
             const age = ageInput.value || "unknown";
-            
+
             if (age < 13) {
                 greetingOutput.textContent = `Hello ${name}! You're just a kid!`;
             } else {
@@ -119,6 +119,14 @@
             modeOutput.textContent = `Mode: ${selectedMode}, Newsletter: ${subscribed}`;
         });
     </script>
+
+    <div class="nav-links" style="margin-top: 2rem; text-align: center;">
+        <a href="index.html">Home</a> |
+        <a href="day_2.html">Day 2</a> |
+        <a href="Day_3.html">Day 3</a> |
+        <a href="Baloon.html">Baloon Game</a> |
+        <a href="fortuneteller.html">Fortune Teller</a>
+    </div>
 </body>
 
 </html>
