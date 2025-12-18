@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Perfect Day in Hawaii</title>
+    <style>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Perfect Day in Hawaii</title>
+    <style>
+        body {
+      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,41 +21,209 @@
     <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #FFB6C1 100%);
+            color: #333;
+        }
 
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .day-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .time-badge {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .day-item {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .photo {
+            flex: 0 0 40%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .info {
+            flex: 0 0 55%;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .location, .with {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .description {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .day-item {
+                flex-direction: column;
+            }
+            
+            .photo, .info {
+                flex: 0 0 100%;
+            }
+            
+            .photo img {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <a href="class_links.html">Class Links</a>
+    <div class="header">
+        <h1>My Perfect Day in Hawaii</h1>
+        <p class="subtitle">A walkthrough of paradise</p>
+    </div>
 
-    <h1>My Personal Website</h1> <br>
-    <br>
-    <h2>My Favorite Music</h2> <br>
-    <Br>
-    <h3>My Family</h3>
-    <p>I have an awesome <em>awesome</em> <strong>Family.</strong> </p>
-    <ul>
-        <li>My Brother (jon) </li> 
-        <li>My Mom (Kathryn)</li>
-        <li>My Dad (James)</li> 
-        <li> Last but not least my pug (Sammy)</li>
-    </ul>
+    <div class="day-container">
+        <div class="day-item">
+            <div class="time-badge">7:00 AM</div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/1a/e4/4d/1ae44d80b0a443766a273c1da4cacdcb.jpg"
+            </div>
+            <div class="info">
+                <h2>Watching the Sunrise</h2>
+                <p class="location">📍 Lanikai Beach, Oahu</p>
+                <p class="with">👥 Just me and the ocean</p>
+                <p class="description">Waking up before the world to witness the golden hour paint the sky.</p>
+            </div>
+        </div>
 
-    <h2>My Friends</h2>
-    <p>My friends are the people i love spending my freetime with. they are kind, hopefully funny, and have my back.</p>
-    <br>
+        <div class="day-item">
+            <div class="time-badge">8:30 AM</div>
+            <div class="photo">
+                <img src="https://www.hawaiimagazine.com/wp-content/uploads/2020/12/Oahu_Pillbox_MikeKaras_web1285horizontal.jpg" alt="Beachside coffee">
+            </div>
+            <div class="info">
+                <h2>Beachside Breakfast</h2>
+                <p class="location">📍 North Shore Cafe</p>
+                <p class="with">👥 With my best friend</p>
+                <p class="description">Fresh coffee and tropical fruit while watching surfers.</p>
+            </div>
+        </div>
 
-    <H3><em>List Of Friends</em></H3>
-    <ol>
-        <li>Bryce</li>
-        <li>Carter</li>
-        <li>Micah (in hawaii)</li>
-    </ol>
+        <div class="day-item">
+            <div class="time-badge">10:00 AM</div>
+            <div class="photo">
+                <img src="https://hawaiitravelwithkids.com/wp-content/uploads/2022/07/Sunrise-Shack-in-North-Shore-Oahu.jpg" alt="Snorkeling">
+            </div>
+            <div class="info">
+                <h2>Snorkeling Adventure</h2>
+                <p class="location">📍 Hanauma Bay</p>
+                <p class="with">👥 With my sister</p>
+                <p class="description">Exploring vibrant coral reefs and tropical fish.</p>
+            </div>
+        </div>
 
-    <a Href="https://www.youtube.com/watch?v=rXrUF1nvFJs&t=48s">67 lore video. </a><br>
-    <br>
-    <audio controls src="mysong.wav"></audio>
+        <div class="day-item">
+            <div class="time-badge">1:00 PM</div>
+            <div class="photo">
+                <img src="https://thumbs.dreamstime.com/b/sunrise-over-hanauma-bay-oahu-hawaii-beautiful-sunrise-view-over-hanauma-bay-oahu-hawaii-casting-warm-glow-tranquil-366705268.jpg" alt="Hawaiian lunch">
+            </div>
+            <div class="info">
+                <h2>Lunch by the Water</h2>
+                <p class="location">📍 Shave Ice Shack</p>
+                <p class="with">👥 With friends</p>
+                <p class="description">Cooling down with authentic Hawaiian shave ice.</p>
+            </div>
+        </div>
 
-    <img src="images.jpg" alt="kid at basketball game saying 67">
+        <div class="day-item">
+            <div class="time-badge">6:00 PM</div>
+            <div class="photo">
+                <img src="https://www.honolulumagazine.com/wp-content/uploads/data-import/3e1874c1/Shave-Ice-Island-Snow-Hawaii.jpg" alt="Oceanfront dinner">
+            </div>
+            <div class="info">
+                <h2>Oceanfront Dinner</h2>
+                <p class="location">📍 Beachside Restaurant</p>
+                <p class="with">👥 With family</p>
+                <p class="description">Fresh seafood and tropical cocktails watching the sunset.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Photo Gallery</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+        <nav>
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="day_2.html">Day 2</a> |
+  <a href="Day_3.html">Day 3</a>
+</nav>
+</nav>
+    </div>
 </body>
-
 </html>

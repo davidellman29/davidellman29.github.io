@@ -16,7 +16,6 @@
         body { font-family: Arial; background: #f5f5f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
         #widgetContainer { background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 30px; width: 350px; text-align: center; }
         #widgetTitle { color: #333; margin-bottom: 20px; }
-        .input-group { margin-bottom: 15px; text-align: left; }
         label { display: block; margin-bottom: 5px; font-weight: bold; }
         input, select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
         button { background: #000000; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; margin: 5px; }
@@ -28,7 +27,7 @@
         .love { background: #ffe6e6; color: #d63384; }
         .career { background: #e6f7ff; color: #0066cc; }
         .life { background: #e6ffe6; color: #28a745; }
-        .error { background: #fff8e6; color: #ff9800; }
+
     </style>
 </head>
 <body>
@@ -113,7 +112,8 @@
             
             // Update display
             fortuneDisplay.textContent = `${userName}, ${selectedFortune}`;
-            fortuneDisplay.className = category;
+            // fortuneDisplay.classList.add(category); // Add category class for styling, leaving existing classes
+            fortuneDisplay.className = category; // Reset previous classes and set only category
             
             // Update counter and show reset button
             fortuneCount++;

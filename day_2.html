@@ -9,4 +9,209 @@
     
 </body>
 </html>
-<a href="index.html"><Day 2</a>
+<a href="index.html"><Day 2</a> <!DOCTYPE html>
+<html lang="en">
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - My Perfect Day in Hawaii</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #FFB6C1 100%);
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .day-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .time-badge {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .day-item {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .photo {
+            flex: 0 0 35%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .info {
+            flex: 0 0 60%;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .location, .with {
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .description {
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .nav-links a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .day-item {
+                flex-direction: column;
+            }
+            
+            .photo, .info {
+                flex: 0 0 100%;
+            }
+            
+            .photo img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Day 2 - My Perfect Day in Hawaii</h1>
+        <p class="subtitle">Another beautiful day in paradise</p>
+    </div>
+
+    <div class="day-container">
+        <div class="day-item">
+            <div class="time-badge">9:00 AM</div>
+            <div class="photo">
+                <img src="https://picsum.photos/seed/hawaii-hiking-trail/400/200.jpg" alt="Hiking trail">
+            </div>
+            <div class="info">
+                <h2>Morning Hike</h2>
+                <p class="location">📍 Diamond Head Trail</p>
+                <p class="with">👥 With hiking group</p>
+                <p class="description">Exploring the scenic trails with breathtaking ocean views.</p>
+            </div>
+        </div>
+
+        <div class="day-item">
+            <div class="time-badge">12:00 PM</div>
+            <div class="photo">
+                <img src="https://picsum.photos/seed/hawaii-luau/400/200.jpg" alt="Hawaiian luau">
+            </div>
+            <div class="info">
+                <h2>Lunch at Luau</h2>
+                <p class="location">📍 Beachside Luau</p>
+                <p class="with">👥 With everyone</p>
+                <p class="description">Traditional Hawaiian food and cultural performances.</p>
+            </div>
+        </div>
+
+        <div class="day-item">
+            <div class="time-badge">3:00 PM</div>
+            <div class="photo">
+                <img src="https://picsum.photos/seed/hawaii-surfing/400/200.jpg" alt="Surfing in Hawaii">
+            </div>
+            <div class="info">
+                <h2>Surfing Lesson</h2>
+                <p class="location">📍 Waikiki Beach</p>
+                <p class="with">👥 With surf instructor</p>
+                <p class="description">Learning to ride the waves in the crystal clear water.</p>
+            </div>
+        </div>
+
+        <div class="day-item">
+            <div class="time-badge">7:00 PM</div>
+            <div class="photo">
+                <img src="https://picsum.photos/seed/hawaii-beach-bonfire/400/200.jpg" alt="Beach bonfire">
+            </div>
+            <div class="info">
+                <h2>Beach Bonfire</h2>
+                <p class="location">📍 Secret Beach</p>
+                <p class="with">👥 With friends</p>
+                <p class="description">Roasting marshmallows and sharing stories under the stars.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Day 1</a>
+        <a href="day2.html">Day 2</a>
+        <a href="gallery.html">Photo Gallery</a>
+        <a href="about.html">About Me</a>
+    <!-- Link back to index.html -->
+<a href="index.html">Back to Home</a>
+
+<!-- Link to Day_3.html -->
+<a href="Day_3.html">Go to Day 3</a>
+    </div>
+</body>
+</html>
